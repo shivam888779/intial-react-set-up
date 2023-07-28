@@ -1,16 +1,15 @@
-import React from 'react';
 import Navigation from './navigation';
 import { ThemeProvider } from '@mui/material';
-import theme from '../styles/global_theme';
-import { AuthProvider } from '../global_context';
+import theme from './global_theme';
+import { ReduxProvider } from './global_context';
 
 function App() {
   return (
-    <AuthProvider>
     <ThemeProvider theme={theme}>
-       <Navigation/>
+      <ReduxProvider>
+         <Navigation/>
+      </ReduxProvider>
     </ThemeProvider>
-    </AuthProvider>
   );
 }
 
