@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ReduxContext } from "../../global_context";
+import { GlobalContext } from "../../global_context";
 
 const Footer = () =>{
-    const { state } = useContext(ReduxContext);
+    const { state } = useContext(GlobalContext);
     console.log(state,"footer")
 
     return <>this is Footer{ state?.type }</>

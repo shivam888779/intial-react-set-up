@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ReduxContext } from "../../global_context";
+import { GlobalContext } from "../../global_context";
 import { Navigate, useNavigate } from "react-router-dom";
 const Header = () =>{
-    const { state, dispatch } = useContext(ReduxContext);
+    const { state, dispatch } = useContext(GlobalContext);
 
     const handleIncrement = () => {
       dispatch({ type: 'INCREMENT' });
